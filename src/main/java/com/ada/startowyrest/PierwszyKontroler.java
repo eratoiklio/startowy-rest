@@ -26,4 +26,9 @@ public class PierwszyKontroler {
     public void osoba(@RequestBody Osoba osoba) {
         osobaService.saveUser(osoba);
     }
+
+    @RequestMapping(value="api/osoba", method=RequestMethod.GET)
+    public Osoba pobierzOsoba(@RequestParam Long id){
+        return osobaService.getUserById(id);
+    }
 }

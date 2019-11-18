@@ -17,4 +17,8 @@ public class OsobaService {
     public Osoba saveUser(Osoba osoba){
         return osobaRepository.save(osoba);
     }
+
+    public Osoba getUserById(Long id) {
+        return osobaRepository.findById(id).get();
+    }
 }
